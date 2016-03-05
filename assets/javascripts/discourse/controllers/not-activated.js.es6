@@ -13,7 +13,7 @@ export default Ember.Controller.extend(ModalFunctionality, {
       this.set('emailSent', true);
     },
     updateEmail: function() {
-      let email = this.get('currentEmail');
+      let email = prompt('新的电子邮箱地址', this.get('currentEmail'));
       if (!email) { return };
       this.set('currentEmail', email);
       Discourse.ajax('/users/action/send_activation_email', {data: {username: this.get('username'), email: email}, type: 'POST'});
