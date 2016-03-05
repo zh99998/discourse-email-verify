@@ -4,7 +4,7 @@
   {{else}}
     {{{i18n 'login.not_activated' sentTo=sentTo}}}
     <a href {{action "sendActivationEmail"}}>{{i18n 'login.resend_activation_email'}}</a>
-    <a href="test">更改邮件地址</a>
+    <a href {{action "updateEmail"}}>更改电子邮箱地址</a>
   {{/if}}
 </div>
 <div class="modal-footer">
